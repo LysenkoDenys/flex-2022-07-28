@@ -159,15 +159,15 @@ body {
 .what__text p:last-child {
   margin: 0px 0px 0px 0px;
 }
-
 .what__title {
-  font-size: 30px;
-  color: rgb(68, 81, 97);
-  line-height: 36px;
+  margin: 0px 0px 33px 0px;
 }
 
 .title {
   margin: 0px 0px 33px 0px;
+  font-size: 30px;
+  color: rgb(68, 81, 97);
+  line-height: 36px;
 }
 
 .columns {
