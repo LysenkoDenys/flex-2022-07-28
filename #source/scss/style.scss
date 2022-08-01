@@ -1,11 +1,11 @@
-// файл стилів для старту (обнуляючий):
+// start style file:
 @import "start-style.scss";
-// файл шрифтів:
+// fonts file:
 @import "fonts.scss";
 
-// змінні:
+// variables:
 
-// щаблони:
+// templettes:
 
 // mixines:
 body {
@@ -60,7 +60,7 @@ body {
   // }
 
   &__list li {
-    // проблема vsc не завжди коректно працює з іконками .png - додано зайвий "/" на почастку - ьлжі працює
+    // css requares to insert slash ("/") before setting a path of file:
     background: url("/img/icons/icon.png") 0 1px no-repeat;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
     font-size: 20px;
@@ -117,27 +117,25 @@ body {
     line-height: 1.5;
     margin: 0px 0px 25px 0px;
   }
-  // тут мені здається треба обнулити відступи у останнього елементу:
+  // here, it seems to me, it is necessary to reset the bottom margin in the last element:
   &__text p:last-child {
     margin: 0px 0px 0px 0px;
+  }
+
+  // .whhat__title
+  &__title {
+    margin: 0px 0px 33px 0px;
   }
 }
 
 // .container {
 // }
 
-.what {
-  // .whhat__title
-
-  &__title {
-    font-size: 30px;
-    color: rgb(68, 81, 97);
-    line-height: 36px;
-  }
-}
-
 .title {
   margin: 0px 0px 33px 0px;
+  font-size: 30px;
+  color: rgb(68, 81, 97);
+  line-height: 36px;
 }
 
 // MIDDLE:
@@ -163,13 +161,13 @@ body {
   // .columns__column
 
   &__column {
-    // забороняємо колонці збільшуватись, дозволяємо зменшуватися і встановлюємо 50%,
-    // щоб колонка стала в половину flex контейнеру:
+    // prevent the column from increasing, allow it to decrease and set it to 50%,
+    // so that the column becomes half of the flex container:
     flex: 0 1 50%;
     margin: 0px 0px 30px 0px;
     padding: 0px 8px 0px 8px;
-    // для останніх елементів не вдасться застосувати відступ 0, так як вони можуть бути динамічними при застосуванні wrap
-    // тому для того, щоб витримати відступ від кінця контенту блоку треба просто зменгити на 30рх відступ у всього контентного блоку (.columns).
+    // the last elements will fail to be bottom margin at 0, as they may be dynamic when wrapped
+    // therefore, in order to maintain the indentation from the end of the content block, you just need to reduce the indentation of the entire content block (.columns) by 30px.
   }
 
   // .columns__item
@@ -252,8 +250,8 @@ body {
   // .vertical__columns
 
   &__columns {
-    // 1 - це для IE, який не завжди гарно працює з flex, для інших браузерів - 0
-    // забророна на збільшення,  зменгення, і % від ширини блоку, так як колонок 3 - то 33,33%
+    // 1 - it is for the IE, which not much works with flex, for other brousers - 0
+    // prevent for encreease, for decrease and % from width of the block. therefore we have 3 columns then 33,33%R
     flex: 0 1 33.33%;
     padding: 0px 22.5px 0px 22.5px;
     display: flex;
